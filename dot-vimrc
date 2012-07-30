@@ -1,0 +1,5 @@
+call pathogen#infect('plugins')
+call pathogen#helptags()
+
+syntax on
+filetype plugin indent on
