@@ -7,3 +7,6 @@
 [submodule "plugins/supertab"]
 	path = plugins/supertab
 	url = git://github.com/ervandew/supertab.git
+[submodule "plugins/drupal-vim"]
+	path = plugins/drupal-vim
+	url = http://git.drupal.org/project/vimrc.git
