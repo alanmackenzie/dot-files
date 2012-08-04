@@ -7,3 +7,6 @@
 [submodule "plugins/delmitmate"]
 	path = plugins/delmitmate
 	url = git://github.com/Raimondi/delimitMate.git
+[submodule "plugins/supertab"]
+	path = plugins/supertab
+	url = https://github.com/ervandew/supertab.git

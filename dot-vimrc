@@ -1,6 +1,7 @@
 call pathogen#infect('plugins')
 call pathogen#helptags()
 
+set wildmode=longest,list,full
 set wildmenu
 set incsearch
 set hlsearch
@@ -14,8 +15,8 @@ set showmatch
 set laststatus=2
 set paste
 
-syntax on
 filetype plugin indent on
+syntax on
 
  " from https://github.com/spf13/spf13-vim/blob/master/.vimrc
 if has('statusline')
@@ -38,3 +39,6 @@ let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 let g:syntastic_style_error_symbol='☹'
 let g:syntastic_style_warning_symbol='☹'
+
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+
