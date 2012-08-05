@@ -5,7 +5,7 @@ call pathogen#helptags()
 filetype plugin indent on
 syntax on
 
-" --- Mouse & clipboard.
+" --- Mouse & clipboard:
 
 " Enable the mouse in all modes, this prevents you from copying line numbers
 " when making a selection with the mouse pointer.
@@ -53,6 +53,8 @@ set noswapfile
 " Lose vi compatibility.
 set nocompatible
 
+" --- Status Line:
+
 " from https://github.com/spf13/spf13-vim/blob/master/.vimrc
 if has('statusline')
   set laststatus=2
@@ -69,11 +71,15 @@ if has('statusline')
   set statusline+=%=%-14.(%l,%c%V%)\ %p%% " Right aligned file nav info
 endif
 
+" --- Syntastic:
+
 let g:syntastic_phpcs_conf=" --standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 let g:syntastic_style_error_symbol='☹'
 let g:syntastic_style_warning_symbol='☹'
+
+" --- OmniComplete:
 
 autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
