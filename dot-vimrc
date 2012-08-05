@@ -2,6 +2,9 @@
 call pathogen#infect('plugins')
 call pathogen#helptags()
 
+filetype plugin indent on
+syntax on
+
 " --- Mouse & clipboard.
 
 " Enable the mouse in all modes, this prevents you from copying line numbers
@@ -50,10 +53,7 @@ set noswapfile
 " Lose vi compatibility.
 set nocompatible
 
-filetype plugin indent on
-syntax on
-
- " from https://github.com/spf13/spf13-vim/blob/master/.vimrc
+" from https://github.com/spf13/spf13-vim/blob/master/.vimrc
 if has('statusline')
   set laststatus=2
   " Broken down into easily includeable segments
