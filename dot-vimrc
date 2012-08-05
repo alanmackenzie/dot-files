@@ -1,3 +1,5 @@
+set nocompatible
+
 call pathogen#infect('plugins')
 call pathogen#helptags()
 
@@ -47,5 +49,7 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
-
 map <F2> \da
+
+" Jump to the line you were at when you last had the file open. 
+au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
