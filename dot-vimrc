@@ -16,6 +16,8 @@ set autoindent
 set showmatch
 set laststatus=2
 set paste
+set nobackup
+set noswapfile
 
 filetype plugin indent on
 syntax on
