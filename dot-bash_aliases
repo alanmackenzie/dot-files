@@ -1,1 +1,2 @@
 alias dcs=phpcs --standard=Drupal
+alias vim=vim.gnome

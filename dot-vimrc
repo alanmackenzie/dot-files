@@ -2,6 +2,23 @@
 call pathogen#infect('plugins')
 call pathogen#helptags()
 
+" --- Mouse & clipboard.
+
+" Enable the mouse in all modes, this prevents you from copying line numbers
+" when making a selection with the mouse pointer.
+set mouse=a
+
+" Cut and Paste directly to/from the system clipboard assuming you're using 
+" vim.gnome compiled with GTK support.
+set clipboard=unnamedplus
+
+" --- Searching & Substitution:
+
+" Turn off vim specific regex.
+nnoremap / /\v
+vnoremap / /\v
+
+
 " --- Searching & Substitution:
 
 " Turn off vim specific regex.
