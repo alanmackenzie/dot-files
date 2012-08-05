@@ -1,23 +1,44 @@
-set nocompatible
-
+" Load all bundles in the ~/.vim/plugins directory.
 call pathogen#infect('plugins')
 call pathogen#helptags()
 
+" --- Searching & Substitution:
+
+" Turn off vim specific regex.
+nnoremap / /\v
+vnoremap / /\v
+
+" Ignore case unless there's a capital letter in the search term.
+set ignorecase
+set smartcase
+
+" Apply substitution to an entire line by default, not just the first occurence.
+set gdefault
+
+" Highlight search results as you type.
+set incsearch
+set showmatch
+set hlsearch
+
+" --- Miscellaneous:
+
 set wildmode=longest,list,full
 set wildmenu
-set incsearch
-set hlsearch
 set expandtab
 set tabstop=2
 set shiftwidth=2
 set shiftround
 set smarttab
 set autoindent
-set showmatch
 set laststatus=2
 set paste
+
+" No backup and no .swp file.
 set nobackup
 set noswapfile
+
+" Lose vi compatibility.
+set nocompatible
 
 filetype plugin indent on
 syntax on
@@ -51,7 +72,22 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
-map <F2> \da
+" --- Key Bindings:
+
+" Change the leader key to ','.
+let mapleader = ","
+
+" Open the api.drupal.org page for the token under the cursor.
+map <F2> \da 
+
+" Move display wise rather than line wise when there's wrapped text.
+" This prevents you jumping down 5 lines when you really wanted to edit
+" some wrapped text.
+nnoremap j gj
+nnoremap k gk
+
+" Make ';' do the same thing as ':', this saves you 1 key press.
+nnoremap ; :
 
 " Jump to the line you were at when you last had the file open. 
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
