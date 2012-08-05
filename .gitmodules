@@ -1,0 +1,12 @@
+[submodule "dot-vim/plugins/fugitive"]
+	path = dot-vim/plugins/fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "dot-vim/plugins/syntastic"]
+	path = dot-vim/plugins/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "dot-vim/plugins/supertab"]
+	path = dot-vim/plugins/supertab
+	url = git://github.com/ervandew/supertab.git
+[submodule "dot-vim/plugins/drupal-vim"]
+	path = dot-vim/plugins/drupal-vim
+	url = http://git.drupal.org/project/vimrc.git
