@@ -105,13 +105,3 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
-
-# ${HOST_IP} is needed for OpenStacks DevStack installation.
-
-# Try the wireless interface (wlan0) first.
-HOST_IP=$(ifconfig wlan0 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}')
-
-# Now try the wired ethernet interface (eth0) if wlan0 failed. 
-if [[ -z "${HOST_IP}" ]]; then
-    HOST_IP=$(ifconfig eth0 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}')
-fi
