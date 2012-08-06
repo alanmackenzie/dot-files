@@ -23,3 +23,5 @@
 	    rlog = log --graph --abbrev-commit --date=relative --all
 
       wdiff = diff --word-diff
+
+      unstage = reset HEAD
