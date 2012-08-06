@@ -10,15 +10,16 @@
     	ui = auto
 
 [github]
-	user = alanmackenzie 
+	user = alanmackenzie
 
 [alias]
     	# Not a fan of random merges
     	pull = pull --ff-only
 
-	quick-log = log --graph --decorate --pretty=oneline --abbrev-commit --all
-	qlog = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	    quick-log = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	    qlog = log --graph --decorate --pretty=oneline --abbrev-commit --all
 
-	rel-log = log --graph --abbrev-commit --date=relative --all
-	rlog = log --graph --abbrev-commit --date=relative --all
+	    rel-log = log --graph --abbrev-commit --date=relative --all
+	    rlog = log --graph --abbrev-commit --date=relative --all
 
+      wdiff = diff --word-diff
