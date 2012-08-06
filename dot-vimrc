@@ -11,7 +11,7 @@ syntax on
 " when making a selection with the mouse pointer.
 set mouse=a
 
-" Cut and Paste directly to/from the system clipboard assuming you're using 
+" Cut and Paste directly to/from the system clipboard assuming you're using
 " vim.gnome compiled with GTK support.
 set clipboard=unnamedplus
 
@@ -94,7 +94,7 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 let mapleader = ","
 
 " Open the api.drupal.org page for the token under the cursor.
-map <F2> \da 
+map <F2> \da
 
 " Move display wise rather than line wise when there's wrapped text.
 " This prevents you jumping down 5 lines when you really wanted to edit
@@ -105,5 +105,8 @@ nnoremap k gk
 " Make ';' do the same thing as ':', this saves you 1 key press.
 nnoremap ; :
 
-" Jump to the line you were at when you last had the file open. 
+" Jump to the line you were at when you last had the file open.
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+
+" Remove all trailing whitespace from the end of lines on save.
+autocmd BufWritePre * :%s/\s\+$//e
