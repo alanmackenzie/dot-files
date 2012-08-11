@@ -10,3 +10,6 @@
 [submodule "dot-vim/plugins/drupal-vim"]
 	path = dot-vim/plugins/drupal-vim
 	url = http://git.drupal.org/project/vimrc.git
+[submodule "plugins/nerdcommenter"]
+	path = plugins/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
