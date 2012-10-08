@@ -46,8 +46,8 @@ set autoindent
 set laststatus=2
 set paste
 
-" No backup and no .swp file.
-set nobackup
+" Backup to /tmp and no .swp file.
+set backupdir=/tmp
 set noswapfile
 
 " Lose vi compatibility.
