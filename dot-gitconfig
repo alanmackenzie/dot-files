@@ -9,6 +9,9 @@
     	interactive = auto
     	ui = auto
 
+[core]
+      filemode = false
+
 [github]
 	user = alanmackenzie
 
