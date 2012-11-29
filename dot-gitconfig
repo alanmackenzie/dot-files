@@ -11,6 +11,10 @@
 
 [core]
       filemode = false
+      editor = vim
+
+[clean]
+      requireForce = false
 
 [github]
 	user = alanmackenzie
