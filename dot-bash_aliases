@@ -5,3 +5,5 @@ alias vim="vim.gnome"
 
 # Cut straight and paste straight to the clipboard, not XA_PRIMARY.
 alias xclip="xclip -selection c"
+
+alias grep="grep -n --color=auto"
