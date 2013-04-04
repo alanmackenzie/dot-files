@@ -17,18 +17,12 @@
       requireForce = false
 
 [github]
-	user = alanmackenzie
+	    user = alanmackenzie
 
 [alias]
     	# Not a fan of random merges
     	pull = pull --ff-only
-
-      ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+      ls = log --pretty=format:"%C(yellow)%h\\ %Creset%s%Cblue\\ [%cn]"
       ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-
       diff = diff --word-diff
-
       unstage = reset HEAD
-
-
-
