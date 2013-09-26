@@ -105,3 +105,7 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+if [ $(uname -o) == "Cygwin" ]; then
+    export VAGRANT_HOME="/cygdrive/c/Vagrant"
+fi
