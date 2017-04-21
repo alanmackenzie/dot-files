@@ -10,3 +10,5 @@ alias du='du -h'
 alias df='df -h'
 alias free='free -m'
 alias spell='spell -b'
+alias json="python -mjson.tool"
+alias xml="xmllint --format -"
